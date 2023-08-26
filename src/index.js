@@ -62,7 +62,14 @@ export default {
       }
 
       // 角色/人物图
-      if (pathname.match(/^\/pic\/crt\/(g|l)\/.*\.jpg$/i)) {
+      if (pathname.match(/^\/pic\/crt\/.*\.jpg$/i)) {
+        let bgmImgURL = new URL("https://lain.bgm.tv/");
+        bgmImgURL.pathname = pathname;
+        return fetch(bgmImgURL);
+      }
+
+      // icon
+      if (pathname.match(/^\/pic\/icon\/.*\.jpg$/i)) {
         let bgmImgURL = new URL("https://lain.bgm.tv/");
         bgmImgURL.pathname = pathname;
         return fetch(bgmImgURL);
