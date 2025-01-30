@@ -1,8 +1,15 @@
-## bangumi-app-image-proxy
-本项目是用于自行托管 Bangumi (lain.bgm.tv) 图片到自有 OSS 的镜像用中间件。
-需要 OSS 支持镜像存储功能 (OSS 抓取源站并存储)。
+# Elysia with Bun runtime
 
-含有简单的 NSFW 鉴别功能。
+## Getting Started
+To get started with this template, simply paste this command into your terminal:
+```bash
+bun create elysia ./elysia-example
+```
 
-### 结构示意
-* lain.bgm.tv -> bangumi-app-image-proxy (本中间件) -> 您的 OSS
+## Development
+To start the development server run:
+```bash
+bun run dev
+```
+
+Open http://localhost:3000/ with your browser to see the result.
