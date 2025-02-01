@@ -92,6 +92,7 @@ export default defineEventHandler(async (event) => {
     throw createError({
       statusCode: 500,
       statusMessage: "OpenAI API error",
+      cause: error,
     });
   }
 });
