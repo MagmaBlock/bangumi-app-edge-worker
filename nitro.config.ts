@@ -6,6 +6,7 @@ export default defineNitroConfig({
     meta: {
       title: "bangumi-app-edge-worker",
     },
+    production: "runtime",
   },
   experimental: {
     openAPI: true,
