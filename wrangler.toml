@@ -1,8 +1,0 @@
-name = "bangumi-app-image-proxy"
-main = "src/index.js"
-compatibility_date = "2023-03-24"
-usage_model = "bundled"
-env = { }
-
-[triggers]
-crons = [ ]
