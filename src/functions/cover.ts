@@ -72,10 +72,10 @@ const tagDict = {
 
 /**
  * 判断此 subjectData 对应的条目为 NSFW 的可能性
- * @param {Object} subjectID
- * @returns {Object} name 标题, blocked 是否禁止, score 评分
+ * @param subjectID
+ * @returns name 标题, blocked 是否禁止, score 评分
  */
-export async function isNSFW(subjectID) {
+export async function isNSFW(subjectID: number | string) {
   let subjectData;
 
   try {
@@ -97,7 +97,7 @@ export async function isNSFW(subjectID) {
       throw subjectData;
     }
   } catch (error) {
-    if (error.status == 404) {
+    if (error instanceof Response && error.status === 404) {
       // 无法获取 API
       return {
         name: "(NSFW or 404)",
@@ -137,7 +137,7 @@ export async function isNSFW(subjectID) {
 
   // 结果
   let nsfw = {
-    name: subjectData.name_cn ?? subjectData.name,
+    name: (subjectData.name_cn ?? subjectData.name) as string,
     blocked: score >= 8 ? true : false,
     score: score, // 如果分数大于等于 8, 将会建议屏蔽
     // unknown: isUnknown(subjectData)
