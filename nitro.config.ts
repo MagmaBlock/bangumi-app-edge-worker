@@ -11,4 +11,9 @@ export default defineNitroConfig({
   experimental: {
     openAPI: true,
   },
+  runtimeConfig: {
+    dogeAccessKey: process.env.DOGE_ACCESS_KEY,
+    dogeSecretKey: process.env.DOGE_SECRET_KEY,
+    dogeBucketName: process.env.DOGE_BUCKET_NAME,
+  },
 });
