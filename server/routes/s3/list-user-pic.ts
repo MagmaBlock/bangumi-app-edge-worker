@@ -25,7 +25,7 @@ defineRouteMeta({
           type: "integer",
           minimum: 1,
           maximum: 1000,
-          default: 1000,
+          default: 100,
           example: 100,
         },
       },
@@ -148,7 +148,7 @@ defineRouteMeta({
 export default eventHandler(async (event) => {
   try {
     // 获取查询参数
-    const { prefix = "", maxKeys = "1000" } = getQuery(event);
+    const { prefix = "", maxKeys = "100" } = getQuery(event);
 
     // 验证 maxKeys 参数
     const maxKeysNum = parseInt(maxKeys as string, 10);
