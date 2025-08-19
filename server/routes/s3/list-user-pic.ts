@@ -4,7 +4,7 @@ import { createS3Client } from "../../utils/s3-client";
 // 定义OpenAPI元数据
 defineRouteMeta({
   openAPI: {
-    summary: "列出S3桶中的文件",
+    summary: "列出S3桶中的用户头像文件",
     description:
       "列出DogeCloud账户下指定桶和目录前缀的文件列表，只允许列出 pic/user/ 目录下的文件",
     tags: ["S3"],
